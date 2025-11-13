@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <!-- Google Ads Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17713083183"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17713083183');
+    </script>
+    <!-- End Google Ads Tag -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE PARK PLACE 柏景峰 | 盡享港島東及九龍東雙CBD優勢</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Noto+Sans+HK&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">
+                    <!-- 電腦版：logo 在左邊 -->
+            <img src="images/sino.jpg" alt="Sino Logo" class="logo-img desktop-logo">
+                    <!-- 改左上角LOGO <span class="logo-text">柏景峰 ONE PARK PLACE</span> -->
+                    <span class="logo-text">柏景峰 ONE <span style="text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; font-size: inherit; font-weight: inherit;">PARK</span> PLACE</span>
+                <!-- 手機版：logo 在右邊 -->
+            <img src="images/sino.jpg" alt="Sino Logo" class="logo-img mobile-logo">
+                </a>
+            </div>
+
+            <!-- 漢堡選單按鈕 -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- 電腦版導航 -->
+            <nav class="main-nav">
+                <div class="sales-nav">
+    <ul>
+        <li><a href="javascript:void(0)" data-modal="sales-brochure">售樓說明書</a></li>
+        <li><a href="javascript:void(0)" data-modal="price-list">價單</a></li>
+        <li><a href="javascript:void(0)" data-modal="sales-arrangement">銷售安排</a></li>
+        <li><a href="javascript:void(0)" data-modal="transaction-record">成交紀錄冊</a></li>
+        <li><a href="javascript:void(0)" data-modal="deed">公契</a></li>
+        <li><a href="javascript:void(0)" data-modal="aerial-photos">鳥瞰照片</a></li>
+        <li><a href="javascript:void(0)" data-modal="tender-documents">招標文件</a></li>
+        <li><a href="javascript:void(0)" data-modal="lottery-results">抽籤結果</a></li>
+    </ul>
+</div>
+                <div class="section-nav">
+                    <ul>
+                        <li><a href="#home">首頁</a></li>
+                        <li><a href="#about">油塘港鐵新項目</a></li>
+                        <li><a href="#項目資料">項目資料</a></li>
+                        <li><a href="#contact">聯絡我們</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 手機版選單 - 必須添加這部分 -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="#contact" class="mobile-nav-link">聯絡我們</a></li>
+
+        <!-- 改成用 data-modal 開彈窗 -->
+        <li><a href="javascript:void(0)" data-modal="sales-brochure">售樓說明書</a></li>
+        <li><a href="javascript:void(0)" data-modal="price-list">價單</a></li>
+        <li><a href="javascript:void(0)" data-modal="sales-arrangement">銷售安排</a></li>
+        <li><a href="javascript:void(0)" data-modal="tender-documents">招標文件</a></li>
+        <li><a href="javascript:void(0)" data-modal="transaction-record">成交紀錄冊</a></li>
+        <li><a href="javascript:void(0)" data-modal="deed">公契</a></li>
+        <li><a href="javascript:void(0)" data-modal="aerial-photos">鳥瞰照片</a></li>
+        <li><a href="javascript:void(0)" data-modal="lottery-results">抽籤結果</a></li>
+    </ul>
+</div>
+<div class="menu-overlay"></div>
+
+
+<main>
+    
+    <!-- 第1頁：單獨影片 -->
+    <!-- 修改你的 HTML -->
+<section id="home" class="hero-video">
+    <!-- 影片和圖片並列，圖片預設隱藏 -->
+    <video autoplay muted loop playsinline class="background-video" id="mainVideo">
+        <source src="videos/cover.mp4" type="video/mp4">
+    </video>
+    
+    <img src="images/cover.webp" id="staticImage" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+
+    <div class="video-overlay">
+    <div class="scroll-indicator">
+        <span class="main-title">柏景峰</span>
+        <span class="main-title">ONE <span style="text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; font-size: inherit; font-weight: inherit;">PARK</span> PLACE</span>
+        <span>鄰近油塘站 盡享港島東及九龍東雙CBD 優勢</span>
+    </div>
+</div>
+
+    <div class="music-control-top">
+        <button id="musicToggle" class="music-toggle-btn">🔈</button>
+    </div>
+</section>
+
+<script>
+// 最簡單的點擊處理
+document.addEventListener('click', function() {
+    const video = document.getElementById('mainVideo');
+    const image = document.getElementById('staticImage');
+    
+    // 停止循環播放
+    video.loop = false;
+    
+    // 當影片結束時顯示圖片
+    video.onended = function() {
+        video.style.display = 'none';
+        image.style.display = 'block';
+    };
+    
+    // 如果影片已經在播，就讓它播完
+    // 如果影片暫停了，重新播放
+    if (video.paused) {
+        video.play();
+    }
+});
+</script>
+
+</main>
+
+<!-- 隱藏音樂播放器 -->
+<audio id="bgMusic" loop>
+    <source src="music/websitemusic.mp3" type="audio/mpeg">
+</audio>
+
+        </section>
+
+        <!-- 第2頁：西九高鐵文藝商圈內容 -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>油塘港鐵新項目</h1>
+                    <p class="about-description">
+信和置業、資本策略地產及港鐵公司攜手呈獻油塘通風樓住宅項目——「柏景峰」（ONE PARK PLACE），以匠心命名寓意深遠。中文名稱「柏景峰」中，「柏」取松柏枝葉繁盛之意，象徵生命力與永恆；「景」與「峰」則寓意項目坐擁優美山峰景致。英文名稱「ONE PARK PLACE」彰顯項目坐擁優越地理位置，毗鄰自然綠意，融合現代設計與獨特生活品味，成就油塘區內矚目住宅新典範。</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>優越地理位置</h3>
+                        <p>鄰近港鐵油塘站，擁觀塘綫及將軍澳綫雙綫優勢</p>
+                    </div>
+                    <div class="feature-card">
+                         <h3>匠心建築設計</h3>
+                        <p>國際知名建築師團隊操刀，融合現代簡約與傳統工藝</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>完善生活配套</h3>
+                        <p>購物、餐飲、教育、醫療一應俱全</p>
+                    </div>
+                </div>
+
+                <div class="about-cta">
+                    <a href="#項目資料" class="btn primary">探索項目</a>
+                    <a href="#contact" class="btn secondary">預約參觀</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第3頁：Bohemian Collection -->
+        <section id="項目資料" class="項目資料">
+            <div class="collection-container">
+                <div class="collection-content">
+                    <h2>項目資料</h2>
+                    <h3>信和置業、資本策略地產及港鐵公司攜手呈獻油塘地鐵住宅項目</h3>
+                    <div class="desc">
+                        <p>發展商：信和集團、資本策略地產、港鐵公司，<p>
+                        <p>地址：油塘高雅里8號<p>
+                        <p>單位數目：748伙<p>
+                        <p>戶型：開放式、一房、兩房、三房<p>
+                        <p>實用面積：260 - 578平方呎<p>
+                        <p>預計關鍵日期：2027年6月30日<p>
+
+                    </div>
+<div class="collection-cta">
+    <a href="https://www.youtube.com/@sinoadschannel" class="btn" target="_blank">項目影片</a>
+    <a href="./documents/leaflet.pdf" class="btn" target="_blank">詳細簡介</a>
+</div> 
+                </div>
+                <div class="collection-grid">
+                    <div class="grid-item">
+                        <img src="./images/mtr.avif" alt="交通優勢：" class="grid-image">
+                        <div class="overlay">
+                            <h3>港鐵油塘站上蓋優勢</h3>
+                            <p>觀塘綫及將軍澳綫雙綫交匯點，步行約1分鐘即達油塘站，1站到港島，迅捷連接港九各區</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/unit.jpeg" alt="戶型設計" class="grid-image">
+                        <div class="overlay">
+                            <h3>一房及兩房為主（共佔逾80%）</h3>
+                            <p>適合上車客及小家庭。提供開放式至三房單位，實用面積範圍為260至578平方呎。配備優質建材及品牌家電，打造舒適居住空間</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/mall.avif" alt="生活配套：" class="grid-image">
+                        <div class="overlay">
+                            <h3>毗鄰大本型商場</h3>
+                            <p>區內多個購物中心，日常生活所需舉步即達，項目周設多個休憩空間及海濱長廊，提供優質生活環境</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第4頁：聯絡我們 -->
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <h2>聯絡我們</h2>
+                <p>預約參觀展示單位，親身體驗柏景峰，盡享港島東及九龍東雙CBD優勢</p>
+                <div class="cta">
+                    <a href="https://wa.me/85253435062?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%8D%B2%E5%BE%97%E6%9B%B4%E5%A4%9A%E3%80%8CONE%20PARK%20PLACE%20%E6%9F%8F%E6%99%AF%E5%B3%B0%E3%80%8D%E8%A9%B3%E6%83%85%EF%BC%8C%E5%92%8C%E9%A0%90%E7%B4%84%E5%8F%83%E8%A7%80%E7%A4%BA%E7%AF%84%E5%96%AE%E4%BD%8D%E3%80%82"
+                       class="btn primary" 
+                       target="_blank">
+                        銷售熱線
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ONE PARK PLACE</div>
+            <div class="footer-disclaimer">
+                發展項目名稱：柏景峰（「發展項目」） | 區域：茶果嶺、油塘、鯉魚門<br>
+                發展項目的街道名稱及門牌號數：高雅里8號^<br>
+                賣方的互聯網網站的網址：www.oneparkplacesino.hk#
+            </div>
+            </p>香港鐵路有限公司（作為「擁有人」）、騰洋有限公司（作為「如此聘用的人」）（備註︰「擁有人」指發展項目中的住宅物業的法律上的擁有人或實益擁有人。「如此聘用的人」指擁有人聘用以統籌和監管發展項目的設計、規劃、建造、裝置、完成及銷售的過程的人士。） | 賣方（擁有人）的控權公司：不適用 | 賣方（如此聘用的人）的控權公司：勝銘有限公司、銳紀有限公司、會連發展有限公司、信和置業有限公司、尖沙咀置業集團有限公司 | 發展項目的認可人士：劉鏡釗 | 發展項目的認可人士以其專業身分擔任經營人、董事或僱員的商號或法團：劉榮廣伍振民建築師有限公司 | 發展項目的承建商：Gammon Engineering & Construction Company Limited | 盡賣方所知的發展項目的預計關鍵日期：2027年6月30日（「關鍵日期」指批地文件的條件就發展項目而獲符合的日期，發展項目的預計關鍵日期由發展項目的認可人士提供。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。） | 賣方建議準買方參閱有關售樓說明書，以了解發展項目的資料。詳情請參閱售樓說明書。 | ^此臨時門牌號數有待發展項目落成時確認。 | 準買家如欲了解發展項目詳情，請參閱售樓說明書。資料有可能出現售價、現金或其他條件上的改動，或撤回而不經提前通知，並可能受特別條款約束。|本宣傳旨在提供更多一手新盤資料及圖片檔案服務只供閱覽；不聲明或保證所提供訊息的準確性和完整性。|在撰寫本廣告時，雖已作出合理和謹慎的考慮，對資料的完整和準確性恕不保證、明示或暗示絕對無誤。|因使用此資料而直接或間接引致的損失或損毀。本網站恕不負責。|本網站內所有內容包括一手新盤資料，僅供參考和借鑒，物業資料，一切以發展商最新公布為準。|本頁面所提到房屋面積如無特別標示，均指實用面積。客戶應自行確保資料或，內容的完整性和準確性。所載資料僅供參考，並不構成要約或合約一部份。|本網頁不是為施行《一手住宅物業銷售條例》第2部而就發展項目指定的互聯網網站的網址。 | 本網頁並不是發展項目之官方網站網頁。本廣告內的圖片與發展商的樓盤並無任何關係。|如有需要，客戶應自行咨詢相關法律及/或專業意見。| 本廣告/宣傳資料及其內容僅供參考，並不構成亦不得詮釋成賣方作出任何不論明示或隱含之合約條款、要約、陳述、承諾或保證。 | </p>
+        </div>
+    </footer>
+
+    <!-- 免責聲明彈出視窗 -->
+<div id="disclaimerModal" class="disclaimer-modal">
+    <div class="disclaimer-content">
+        <button class="disclaimer-close">&times;</button>
+        <div class="disclaimer-body">
+            <div class="disclaimer-text">
+                <p><strong>www.oneparkplacesino.com</strong></p>
+                <p>街道名稱及門牌號數 (臨時)：高雅里8號<sup>^</sup></p>
+                <p>區域：茶果嶺、油塘、鯉魚門</p>
+                <p>本廣告/宣傳資料內載列的相片、圖像、繪圖或素描顯示純屬畫家對有關發展項目之想像。有關相片、圖像、繪圖或素描並非按照比例繪畫及/或可能經過電腦修飾處理。準買家如欲了解發展項目的詳情，請參閱售樓說明書。賣方亦建議準買家到有關發展地盤作實地考察，以對該發展地盤、其周邊地區環境及附近的公共設施有較佳了解。</p>
+
+                </p>香港鐵路有限公司（作為「擁有人」）、騰洋有限公司（作為「如此聘用的人」）（備註︰「擁有人」指發展項目中的住宅物業的法律上的擁有人或實益擁有人。「如此聘用的人」指擁有人聘用以統籌和監管發展項目的設計、規劃、建造、裝置、完成及銷售的過程的人士。） | 賣方（擁有人）的控權公司：不適用 | 賣方（如此聘用的人）的控權公司：勝銘有限公司、銳紀有限公司、會連發展有限公司、信和置業有限公司、尖沙咀置業集團有限公司 | 發展項目的認可人士：劉鏡釗 | 發展項目的認可人士以其專業身分擔任經營人、董事或僱員的商號或法團：劉榮廣伍振民建築師有限公司 | 發展項目的承建商：Gammon Engineering & Construction Company Limited | 盡賣方所知的發展項目的預計關鍵日期：2027年6月30日（「關鍵日期」指批地文件的條件就發展項目而獲符合的日期，發展項目的預計關鍵日期由發展項目的認可人士提供。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。） | 賣方建議準買方參閱有關售樓說明書，以了解發展項目的資料。詳情請參閱售樓說明書。 | ^此臨時門牌號數有待發展項目落成時確認。 | 準買家如欲了解發展項目詳情，請參閱售樓說明書。資料有可能出現售價、現金或其他條件上的改動，或撤回而不經提前通知，並可能受特別條款約束。|本宣傳旨在提供更多一手新盤資料及圖片檔案服務只供閱覽；不聲明或保證所提供訊息的準確性和完整性。|在撰寫本廣告時，雖已作出合理和謹慎的考慮，對資料的完整和準確性恕不保證、明示或暗示絕對無誤。|因使用此資料而直接或間接引致的損失或損毀。本網站恕不負責。|本網站內所有內容包括一手新盤資料，僅供參考和借鑒，物業資料，一切以發展商最新公布為準。|本頁面所提到房屋面積如無特別標示，均指實用面積。客戶應自行確保資料或，內容的完整性和準確性。所載資料僅供參考，並不構成要約或合約一部份。|本網頁不是為施行《一手住宅物業銷售條例》第2部而就發展項目指定的互聯網網站的網址。 | 本網頁並不是發展項目之官方網站網頁。本廣告內的圖片與發展商的樓盤並無任何關係。|如有需要，客戶應自行咨詢相關法律及/或專業意見。| 本廣告/宣傳資料及其內容僅供參考，並不構成亦不得詮釋成賣方作出任何不論明示或隱含之合約條款、要約、陳述、承諾或保證。 | </p>
+        
+
+                <p class="footnote">* 最後更新日期：2025年11月13日。</p>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- WhatsApp 浮動通話標記 -->
+    <div id="whatsapp-float">
+        <a href="https://wa.me/85253435062?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%8D%B2%E5%BE%97%E6%9B%B4%E5%A4%9A%E3%80%8CONE%20PARK%20PLACE%20%E6%9F%8F%E6%99%AF%E5%B3%B0%E3%80%8D%E8%A9%B3%E6%83%85%EF%BC%8C%E5%92%8C%E9%A0%90%E7%B4%84%E5%8F%83%E8%A7%80%E7%A4%BA%E7%AF%84%E5%96%AE%E4%BD%8D%E3%80%82"
+           target="_blank" 
+           class="whatsapp-float-btn"
+           title="WhatsApp 查詢">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.262-6.187-3.55-8.444"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- 文件列表彈出視窗 -->
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+    </div>
+    <div class="modal-line"></div>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+</body>
+</html>
